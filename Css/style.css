@@ -13,7 +13,7 @@
     align-items: center;
     width:  100vw;
     height: 100vh;
-    background-color: #4A4AC4
+    background-color: #7F3FBF
 }
 .inner-wrapper{
     width: 700px;
@@ -46,6 +46,9 @@
     transform: translatey(-10px);
     background-color: #A8A8EA
 }
+*****************************
+/* Quiz.html Designing Page */
+*****************************
 .list-group-wrapper{
     width: 550px;
     margin-left: 0%;
@@ -64,16 +67,17 @@
     background-color: #4A4AC4;
     border: 2px solid white;
     color: white;
+    cursor: pointer;
 
 }
 .quiz-body{
-    background-color: #4A4AC4
+    background-color: #7F3FBF
 }
 .question{
     font-family: 'Oswald', sans-serif;
 }
 .list-button{
-    font-family: 'Oswald', sans-serif;;
+    font-family: 'Oswald', sans-serif;
 }
 .next-button{
     height: 40px;
@@ -101,4 +105,5 @@
     color: #fff;
     text-align: center;
     margin-top: 15px;
+    font-family: 'Oswald', sans-serif;
   }

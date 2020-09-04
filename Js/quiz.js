@@ -39,6 +39,7 @@ let questions = [
 // Global Varibales which is used in Next function
 let count = 0;
 let points = 0;
+sessionStorage.setItem("Points", points)
 function Next() {
   let userAnswer = document.querySelector("li.list-button.active").innerHTML
    // Calculate the Quiz points
@@ -49,6 +50,8 @@ function Next() {
   // Redirect to the Answer Page
   if (count == questions.length - 1) {
     location.href = "Result.html"
+    sessionStorage.setItem("Time",`${minutes} mintues and ${seconds} seconds`)
+    clearInterval(mytime)
     return
   }
   // **********************************
@@ -67,6 +70,7 @@ function showQuestion(count) {
                         <li class="list-button">${questions[count].options[2]}</li>
                         <li class="list-button">${questions[count].options[3]}</li>
                         </ul> `
+  ShowName();
   toggleActive()
 }
 // This function works for select quiz options
@@ -82,4 +86,12 @@ function toggleActive() {
       option[i].classList.add("active");
     };
   }
+}
+function ShowName(){
+  let name = sessionStorage.getItem("Name");
+  let Name = document.getElementById("name-heading");
+  Name.innerHTML = `Welcome: ${name} <span class="badge badge-primary badge-pill time">00:00</span>`
+  console.log(name)
+
+
 }
