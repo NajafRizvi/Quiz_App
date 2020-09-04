@@ -38,8 +38,14 @@ let questions = [
   ];
   let count = 0;
   function Next(){
+      let userAnswer = document.querySelector("li.list-button.active").innerHTML
+      if(userAnswer == questions[count].answer){
+        console.log("write")
+      }
+      else{
+        console.log("Wrong")
+      }
       count++;
-      console.log(count)
       showQuestion(count)
 
   }

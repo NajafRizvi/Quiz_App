@@ -38,8 +38,9 @@
     height: 40px;
     font-family: 'Oswald', sans-serif;
     border-radius: 70px;
-    border: 10px  wheat;
     transition: 0.4s all;
+    background-color: white!;
+    color: #4A4AC4
 }
 .button:hover{
     transform: translatey(-10px);
